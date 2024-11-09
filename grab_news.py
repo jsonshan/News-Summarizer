@@ -3,6 +3,32 @@ from bs4 import BeautifulSoup
 from model import generate_summary
 import re
 
+# url to text
+
+def url_to_text(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Find the main article content - this may vary based on the website structure
+    # Example: we assume the article content is inside a <div class="article-body"> tag.
+    # You should adjust this according to the structure of the page you're working with.
+    article_body = soup.find('div', class_='article-body')  # Modify based on actual website structure
+
+    if not article_body:
+        # Fallback: attempt to get all text in the page if article-body is not found
+        article_body = soup
+
+    # Extract text from all paragraphs within the article body
+    paragraphs = article_body.find_all('p')
+
+    # Combine the paragraphs into a single string with a new line separating each paragraph
+    full_text = '\n'.join([para.get_text(strip=True) for para in paragraphs if para.get_text(strip=True)])
+
+    # Clean up extra spaces or newlines at the start and end
+    full_text = ' '.join(full_text.split())  # Remove excessive spaces
+
+    return full_text
+
 
 # CNN News
 

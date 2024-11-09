@@ -1,5 +1,5 @@
 import requests
-from google.generativeai import genai
+import google.generativeai as genai
 from bs4 import BeautifulSoup
 
 instruction_summary = {
