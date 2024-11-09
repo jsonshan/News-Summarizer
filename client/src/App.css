@@ -9,28 +9,6 @@
 .toggle-nav-btn{
     background-color: rgb(206, 206, 206);
 }
-.navbar{
-    position: fixed; /* Fixed positioning to keep the navbar on the left side */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 128px; /* Set the width of the navbar */
-    background-color: #ffffff;
-    color: black;
-    padding-top: 20px;
-    transition: transform 0.3s ease;
-}
-.navbar> ul > *{
-    padding: 10px 20px;
-}
-.navbar> ul > *:hover{
-    background-color: grey;
-    cursor: pointer;    
-}
-
-.toggle-nav-btn:hover {
-    cursor: pointer;
-}
 #page-title {
     text-align: center;
     color: #C1C1C1;
