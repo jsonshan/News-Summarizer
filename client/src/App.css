@@ -1,0 +1,20 @@
+.app-container {
+    display: flex;
+}
+.App {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 24px 8%;
+    /* display: flex; */
+}
+.toggle-nav-btn{
+    background-color: rgb(206, 206, 206);
+}
+#page-title {
+    text-align: center;
+    color: #C1C1C1;
+    font-size: 4rem;
+}
+.sub-title {
+    margin: 24px 0;
+    font-size: 1.75rem;
+  }
