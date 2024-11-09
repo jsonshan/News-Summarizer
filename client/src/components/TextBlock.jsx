@@ -8,11 +8,11 @@ function TextBlock({type, logo, srcName}) {
         (type == 'sub-summary'
         ? 
         <>
-          <div class="item-display">
+          <div className="item-display">
             <img src={logo}/>
             <p>{srcName}</p>
           </div>
-          <div class="divider"></div>
+          <div className="divider"></div>
         </>
         :
           <></>

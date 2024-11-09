@@ -1,8 +1,11 @@
 import React from 'react'
-
-function NewsIcon() {
+import "../styles/NewsIcon.css"
+function NewsIcon({itemSrc, itemName}) {
   return (
-    <div>NewsIcon</div>
+    <div className="item-cards">
+        <img src={itemSrc}/>
+        <p>{itemName}</p>
+    </div>
   )
 }
 

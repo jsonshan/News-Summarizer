@@ -2,7 +2,7 @@
     width: 95%;
     height: 90%;
     color: #2C3E50;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .text-section > p {
@@ -13,14 +13,14 @@
     border: 1px solid black;
     margin: 0 5px;
     height: 216px;
-    width: 80%;
+    width: 100%;
     background-color: #C3B2B2;
     box-shadow: 1px 4px 4px black;
     border-radius: 24px;
   }
   .main-summary {
     display: flex;
-    height: 256px;
+    height: 360px;
     align-items: center;
     justify-content: center;
   }
@@ -44,9 +44,10 @@
   }
 
   .divider {
-    width: 8px;
+    width: 4px;
     height: 85%;
-    background-color: black;
+    background-color: #2C3E50;
+    border-radius: 5px;
   }
 
   .item-display > img{
