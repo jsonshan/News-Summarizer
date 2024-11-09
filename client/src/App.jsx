@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TextBlock from './components/TextBlock'
 import NewsSource from './components/NewsSource'
 
+//Pages
+import FinancePage from './pages/FinancePage';
+import TechnologyPage from './pages/TechnologyPage';
+
 function App() {
   const [count, setCount] = useState(0)
   const [sources, setSources] = useState([['https://yt3.googleusercontent.com/n5DRh94eycw6xGcOKTn6LKQwztTwaw24fXPniFTXA3VPgwJaiOFdBwJNtXRHYUf7OdEAk9upwH0=s900-c-k-c0x00ffffff-no-rj', 'CNN'], ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Fox_News_Channel_logo.svg/1280px-Fox_News_Channel_logo.svg.png', 'Fox News']])
