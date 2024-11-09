@@ -25,4 +25,13 @@
  .item-cards > p {
     bottom: 0;
  }
+
+ .selected {
+   background-color: #70A7FF;
+   height: 82.5%;
+ }
+
+ .selected:hover{
+   background-color: #70A7FF;
+ }
  
