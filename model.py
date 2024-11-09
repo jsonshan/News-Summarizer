@@ -1,6 +1,10 @@
 import requests
 import google.generativeai as genai
 from bs4 import BeautifulSoup
+import os
+
+os.environ.get("API_KEY")
+genai.configure(api_key=os.environ["API_KEY"])
 
 instruction_summary = {
   "You are a news summarization expert who specializes in creating concise and easy-to-understand summaries. " \
