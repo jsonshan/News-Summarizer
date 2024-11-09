@@ -20,6 +20,9 @@ function App() {
     setSelectedGenre(genre);
     console.log("new genre  ", genre);
   }
+
+
+  
   return (
     <>
       <div className='App'> {/* main page */}
