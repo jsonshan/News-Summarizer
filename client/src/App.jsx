@@ -10,12 +10,17 @@ function App() {
   const [selectedPage, setSelectedPage] = useState('technology');
   const [genres, setGeneres] = useState(['Finance', 'Environment', 'Technology']);
 
+  const[selectedSources, setSelectedSources] = useState([true, true])
+  const updateSources = (data) => {
+    setSelectedSources(data);
+  }
+  
   return (
     <>
       <div className='App'> {/* main page */}
         <h1 id="page-title">WEB TITLE PLACEHOLDER</h1>
         <h3 className="sub-title">News Sources</h3>
-        <NewsSource sources={sources}/>
+        <NewsSource sources={sources} onChangeSelected={updateSources}/>
         <h3 className="genre-title">Genre</h3>
         <GenreSelection genres={genres}></GenreSelection>
         <h3 className="sub-title">Summary</h3>

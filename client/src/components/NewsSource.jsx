@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "../styles/NewsSource.css"
 
 import NewsIcon from "./NewsIcon";
 
 function NewsSource({sources, onChangeSelected}){
     // Sources = [ [imgSrc, itemName], [imgSrc, itemName] ... ]
-    const [selectedSources, setSelectedSources] = useState([false, false]);
+    const [selectedSources, setSelectedSources] = useState([true, true]);
         
     const handleClick = (i) => {
         setSelectedSources(prev => {
@@ -13,8 +13,11 @@ function NewsSource({sources, onChangeSelected}){
             copy[i] = !copy[i]
             return copy;
         })
-        // onChangeSelected(selectedSources);
     };
+    useEffect(() => {
+        onChangeSelected(selectedSources);
+    }, [selectedSources, onChangeSelected]);
+
 
     return(
         <div id="news-sources-container">
