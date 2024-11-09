@@ -93,3 +93,61 @@ def grab_urls_time(source_url):
     else:
         print(f"Failed to retrieve {source_url}")
         return []
+
+
+# CBS news
+
+def grab_urls_cbs(source_url):
+    # Send a GET request to the category URL
+    response = requests.get(source_url)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Parse the HTML content with BeautifulSoup
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Collect the article URLs where <article> contains an <a> tag
+        article_urls = []
+
+        # Find all <article> tags with the specific class that CBS uses
+        articles = soup.find_all('article', class_='item')
+
+        for article in articles:
+            # Find the <a> tag within each <article> tag
+            link = article.find('a', href=True)
+            if link:
+                article_urls.append(link['href'])
+
+        return article_urls[:3]
+    else:
+        print(f"Failed to retrieve {source_url}")
+        return []
+
+
+# Fox news
+
+def grab_urls_fox(source_url):
+    # Send a GET request to the category URL
+    response = requests.get(source_url)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Parse the HTML content with BeautifulSoup
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Collect the article URLs where <article> contains an <a> tag
+        article_urls = []
+
+        # Find all <article> tags with the specific class that CBS uses
+        articles = soup.find_all('article', class_='article')
+
+        for article in articles:
+            # Find the <a> tag within each <article> tag
+            link = article.find('a', href=True)
+            if link:
+                article_urls.append('https://foxnews.com' + link['href'])
+
+        return article_urls[:3]
+    else:
+        print(f"Failed to retrieve {source_url}")
+        return []
