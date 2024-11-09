@@ -3,12 +3,19 @@ import './App.css'
 import TextBlock from './components/TextBlock'
 import NewsSource from './components/NewsSource'
 import NewsIcon from './components/NewsIcon'
+import NewsSource from './components/NewsSource'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <h1 id="page-title">WEB TITLE PLACEHOLDER</h1>
+
+      <h3 className="sub-title">News Sources</h3>
+      <NewsSource></NewsSource>
+
+
       <div className='App'>
         <h1 id="page-title">WEB TITLE PLACEHOLDER</h1>
         <NewsSource/>
