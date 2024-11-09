@@ -1,0 +1,14 @@
+.App {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 24px 8%;
+}
+#page-title {
+    text-align: center;
+    color: #C1C1C1;
+    font-size: 4rem;
+}
+
+.sub-title {
+    margin: 24px 0;
+    font-size: 1.75rem;
+  }
