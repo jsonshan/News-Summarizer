@@ -45,25 +45,27 @@ def grab_urls_cnn(source_url):
         links = soup.find_all('a', href=True, attrs={"data-link-type": "article"})
 
         # Collect the article URLs
-        article_urls = []
+        article_urls = set([])
 
         for link in links:
             href = link['href']
             # Make sure the URL is absolute
             if href.startswith('/'):
                 href = 'https://www.cnn.com' + href
-            article_urls.append(href)
+            article_urls.add(href)
+
+        result = []
+        for i in range(3):
+            result += [article_urls.pop()]
 
         # Return the top 3 article URLs
-        return article_urls[:3]
+        return result
     else:
         print(f"Failed to retrieve {source_url}")
         return []
 
 
 # NBC News
-
-
 def grab_urls_nbc(source_url):
     # Send a GET request to the category URL
     response = requests.get(source_url)
@@ -84,9 +86,13 @@ def grab_urls_nbc(source_url):
             a_tag = headline.find('a', href=True)
             if a_tag:
                 article_urls.append(a_tag['href'])
+        article_urls = set(article_urls)
+        result = []
+        for i in range(3):
+            result += [article_urls.pop()]
 
         # Return the top 3 article URLs
-        return article_urls[:3]
+        return result
     else:
         print(f"Failed to retrieve {source_url}")
         return []
@@ -115,14 +121,20 @@ def grab_urls_time(source_url):
             if headline:
                 article_urls.append("https://time.com" + link['href'])
 
-        return article_urls[:3]
+        article_urls = set(article_urls)
+        result = []
+        for i in range(3):
+            result += [article_urls.pop()]
+
+        # Return the top 3 article URLs
+        return result
     else:
         print(f"Failed to retrieve {source_url}")
         return []
 
 
-# CBS news
 
+# CBS news
 def grab_urls_cbs(source_url):
     # Send a GET request to the category URL
     response = requests.get(source_url)
@@ -144,14 +156,19 @@ def grab_urls_cbs(source_url):
             if link:
                 article_urls.append(link['href'])
 
-        return article_urls[:3]
+        article_urls = set(article_urls)
+        result = []
+        for i in range(3):
+            result += [article_urls.pop()]
+
+        # Return the top 3 article URLs
+        return result
     else:
         print(f"Failed to retrieve {source_url}")
         return []
 
 
 # Fox news
-
 def grab_urls_fox(source_url):
     # Send a GET request to the category URL
     response = requests.get(source_url)
@@ -173,7 +190,14 @@ def grab_urls_fox(source_url):
             if link:
                 article_urls.append('https://foxnews.com' + link['href'])
 
-        return article_urls[:3]
+        article_urls = set(article_urls)
+        result = []
+        for i in range(3):
+            result += [article_urls.pop()]
+
+        # Return the top 3 article URLs
+        return result
     else:
         print(f"Failed to retrieve {source_url}")
         return []
+
