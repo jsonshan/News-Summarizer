@@ -3,8 +3,9 @@ import React, {useEffect} from 'react'
 import "../styles/GenreSelection.css"
 
 
-function GenreSelection({genres}) {
+function GenreSelection({genres, onChangeGenre}) {
   function select(genreName) {
+    onChangeGenre(genreName);
     genres.forEach((element) => {
       let item = document.getElementById(element);
       let x = document.getElementById(genreName);
@@ -14,12 +15,10 @@ function GenreSelection({genres}) {
   }
 
   useEffect(() => {
-    // Set "finance" as the initial genre with the "enabled" class
     if (genres.includes("Finance")) {
       select("Finance");
-      console.log('AHHH');
     }
-  }, [genres]); // Only runs when 'genres' changes
+  }, [genres]);
 
   return (
     <div className="genre-container">

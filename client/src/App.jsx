@@ -11,10 +11,15 @@ function App() {
   const [genres, setGeneres] = useState(['Finance', 'Environment', 'Technology']);
 
   const[selectedSources, setSelectedSources] = useState([true, true])
+  const [selectedGenre, setSelectedGenre] = useState('Finance');
   const updateSources = (data) => {
     setSelectedSources(data);
+    console.log("new sources ", data);
   }
-  
+  const handleChangeGenre = (genre) => {
+    setSelectedGenre(genre);
+    console.log("new genre  ", genre);
+  }
   return (
     <>
       <div className='App'> {/* main page */}
@@ -22,7 +27,7 @@ function App() {
         <h3 className="sub-title">News Sources</h3>
         <NewsSource sources={sources} onChangeSelected={updateSources}/>
         <h3 className="genre-title">Genre</h3>
-        <GenreSelection genres={genres}></GenreSelection>
+        <GenreSelection genres={genres} onChangeGenre={handleChangeGenre}></GenreSelection>
         <h3 className="sub-title">Summary</h3>
         <TextBlock type="main-summary"/>
         <h3 className="sub-title">Summary (Separate Sources)</h3>

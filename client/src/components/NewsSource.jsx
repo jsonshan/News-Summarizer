@@ -18,7 +18,7 @@ function NewsSource({sources, onChangeSelected}){
         onChangeSelected(selectedSources);
     }, [selectedSources, onChangeSelected]);
 
-
+    
     return(
         <div id="news-sources-container">
             <div id="items-wrapper">
