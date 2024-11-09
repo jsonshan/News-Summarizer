@@ -57,6 +57,15 @@
 #add-source-btn { 
   padding: 20px;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
 
 .text-block {
@@ -109,3 +118,26 @@
   width: 64px;
 }
 
+#page-title {
+  text-align: center;
+  text-decoration: underline;
+ }
+ 
+ 
+ /* hover over effects for the item cards */
+ .item-cards:hover {
+  background-color: #939393;
+ }
+ 
+ 
+ /* Eases the transition of the item-cards hover effects */
+ .item-cards {
+  transition: background-color 0.5s ease;
+ }
+ 
+ 
+ /* Hover effects of add-source-btn*/
+ #add-source-btn:hover {
+  background-color: darkgray;
+ }
+ 
