@@ -15,8 +15,9 @@ function GenreSelection({genres}) {
 
   useEffect(() => {
     // Set "finance" as the initial genre with the "enabled" class
-    if (genres.includes("finance")) {
-      select("finance");
+    if (genres.includes("Finance")) {
+      select("Finance");
+      console.log('AHHH');
     }
   }, [genres]); // Only runs when 'genres' changes
 
