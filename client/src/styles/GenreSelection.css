@@ -1,0 +1,41 @@
+.genre-container {
+    display: flex;
+    background-color: #F1F1F1;
+    padding: 0 8px;
+    margin: 4px 0;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 3px 1px #DEDEDE;
+    border: 1px solid rgba(0,0,0,.25);
+ }
+
+.genre-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+
+.genre-cards {
+    display: flex;
+    border-radius: 8px;
+    height: 80%;
+    width: 120px;
+    padding: 8px 0;
+    background-color: rgb(228, 228, 228);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.genre-cards:hover{
+    background-color: #939393;
+    font-size: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.enabled{
+    background-color: #939393;
+}
