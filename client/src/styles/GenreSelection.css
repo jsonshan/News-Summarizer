@@ -15,6 +15,7 @@
     align-items: center;
     gap: 16px;
     height: 100%;
+    overflow-x: auto;
 }
 
 .genre-cards {
