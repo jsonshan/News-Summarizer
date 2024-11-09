@@ -5,7 +5,7 @@ import NewsIcon from "./NewsIcon";
 
 function NewsSource({sources, onChangeSelected}){
     // Sources = [ [imgSrc, itemName], [imgSrc, itemName] ... ]
-    const [selectedSources, setSelectedSources] = useState([true, true]);
+    const [selectedSources, setSelectedSources] = useState([true, true, true, true, true]);
         
     const handleClick = (i) => {
         setSelectedSources(prev => {
@@ -18,7 +18,7 @@ function NewsSource({sources, onChangeSelected}){
         onChangeSelected(selectedSources);
     }, [selectedSources, onChangeSelected]);
 
-    
+
     return(
         <div id="news-sources-container">
             <div id="items-wrapper">
