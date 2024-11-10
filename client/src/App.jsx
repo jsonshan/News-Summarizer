@@ -48,12 +48,7 @@ function App() {
         <h3 className="sub-title">Summary</h3>
         <TextBlock type="main-summary"/>
         <h3 className="sub-title">Summary (Separate Sources)</h3>
-        {
-        genres.forEach(genre, i => {
-          if(selectedSources[i] == true){
-            
-          }
-        })}
+        
       </div>
     </>
   )
