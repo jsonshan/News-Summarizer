@@ -75,7 +75,6 @@ def grab_urls_nbc(source_url):
     if response.status_code == 200:
         # Parse the HTML content with BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
-
         # Find all <h2> tags with the specified class name
         headlines = soup.findAll('h2', class_='multistoryline__headline')
         headlines += soup.findAll('h2', class_='styles_headline__ice3t')
@@ -89,7 +88,7 @@ def grab_urls_nbc(source_url):
                 article_urls.append(a_tag['href'])
         article_urls = set(article_urls)
         result = []
-        for i in range(3):
+        for i in range(1):
             result += [article_urls.pop()]
 
         # Return the top 3 article URLs
