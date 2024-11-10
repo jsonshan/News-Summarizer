@@ -56,7 +56,8 @@ def grab_urls_cnn(source_url):
 
         result = []
         for i in range(3):
-            result += [article_urls.pop()]
+            if article_urls:
+                result += [article_urls.pop()]
 
         # Return the top 3 article URLs
         return result
