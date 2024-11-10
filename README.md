@@ -1,9 +1,9 @@
 # news.ai
 
-![Logo](path-to-your-logo.jpg)
+![Logo](images/newai.png)
 
 ## Cover Image
-![Cover Image](path-to-your-cover-image.jpg)
+![Cover Image](images/webpage.PNG)
 
 ## Tagline
 Let us read the news, so you don't have to!
@@ -22,17 +22,17 @@ One of the main challenges was developing methods for web scraping from differen
 - GitHub
 - HTML/CSS
 
-## Links
-- [Live Demo](https://your-live-demo-link.com)
-
 ## Video Demo
 [Watch the video demo](https://your-video-link.com)
 
 
 
-## Screenshots
-![Screenshot 1](path-to-screenshot-1.jpg)
-![Screenshot 2](path-to-screenshot-2.jpg)
-![Screenshot 3](path-to-screenshot-3.jpg)
+## Sketch
+![Screenshot 1](images/sketchnewsai.PNG)
+## Figma Mock Design
+![Screenshot 2](images/figmamockdesignnewsai.PNG)
 
+
+## Limitations
+Due to a time zone misunderstanding, we only had 12 hours to work on this project instead of the 36 hours we could have had, as we initially thought the deadline was in EST instead of IST. Additionally, we faced challenges connecting the backend to the frontend, which impacted our development process.
 
