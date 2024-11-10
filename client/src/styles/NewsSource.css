@@ -4,6 +4,7 @@
     padding: 0 8px;
     margin: 4px 0;
     height: 144px;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 3px 1px #DEDEDE;
@@ -12,6 +13,8 @@
   #items-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 16px;
     height: 100%;
     /* background-color: red; */

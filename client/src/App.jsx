@@ -43,9 +43,13 @@ function App() {
       <div className='App'> {/* main page */}
         <Header/>
         <h3 className="sub-title">News Sources</h3>
-        <NewsSource sources={sources} onChangeSelected={updateSources}/>
+        <div className='big-container'>
+          <NewsSource sources={sources} onChangeSelected={updateSources}/>
+        </div>
         <h3 className="genre-title">Genre</h3>
-        <GenreSelection genres={genres} onChangeGenre={handleChangeGenre}></GenreSelection>
+        <div className='big-container'>
+          <GenreSelection genres={genres} onChangeGenre={handleChangeGenre}></GenreSelection>
+        </div>
         <h3 className="sub-title">Summary</h3>
         <TextBlock type="main-summary"/>
         <h3 className="sub-title">Summary (Separate Sources)</h3>
