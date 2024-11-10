@@ -20,6 +20,7 @@ One of the main challenges was developing methods for web scraping from differen
 - Flask
 - BeautifulSoup
 - GitHub
+- React
 - HTML/CSS
 
 ## Video Demo
